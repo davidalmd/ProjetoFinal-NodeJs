@@ -18,5 +18,16 @@
     "jest": "^28.1.2",
     "nodemon": "^2.0.19",
     "supertest": "^6.2.4"
-  }
+  },
+  "description": "Projeto final da matéria de NodeJs. Desenvolvimento de uma aplicação WEB, com finalidade de uma lista de tarefas a fazer (to do list).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cLausx0/ProjetoFinal-NodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cLausx0/ProjetoFinal-NodeJs/issues"
+  },
+  "homepage": "https://github.com/cLausx0/ProjetoFinal-NodeJs#readme"
 }
