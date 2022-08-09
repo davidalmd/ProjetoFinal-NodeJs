@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  h2 Eae minha gente
-  p Welcome to #{title}
+  .central-box
+    h1 Tarefas
+    img(src="/../img/tasks.png", alt="Logo de Tarefas")
+    form(action="entrar") 
+      button Entrar 
+    form(action="cadastrar") 
+      button Cadastrar
