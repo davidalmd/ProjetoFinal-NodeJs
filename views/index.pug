@@ -3,47 +3,36 @@ extends layout
 block content
   .hold-transition.login-page
     .login-box
+
       // /.login-logo
-      .card.card-outline.card-primary
+      .card.card-outline.card-info
         .card-header.text-center
-          a.h1(href='../../index2.html')
-            b Admin
-            | LTE
+          // Cada &nbsp é para dar um espaço a mais 
+          .row.offset-2 &nbsp &nbsp &nbsp
+            i.fa-solid.fa-list-check.h1
+            p &nbsp &nbsp
+            a(href="http://localhost:3000").h1|Tarefas
         .card-body
-          p.login-box-msg Sign in to start your session
-          form(action='../../index3.html' method='post')
-            .input-group.mb-3
-              input.form-control(type='email' placeholder='Email')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-envelope
-            .input-group.mb-3
-              input.form-control(type='password' placeholder='Password')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-lock
-            .row
-              .col-8
-                .icheck-primary
-                  input#remember(type='checkbox')
-                  label(for='remember')
-                    | Remember Me
+          h5.login-box-msg Olá, que bom tê-lo aqui!
+          form(action='entrar' method='get')
               // /.col
-              .col-4
-                button.btn.btn-primary.btn-block(type='submit') Sign In
+              center 
+                p.col-5
+                  button.btn.btn-info.btn-block(type='submit')
+                    .input-group-append
+                      .iput-group-text                          
+                        | &nbsp Entrar &nbsp &nbsp &nbsp &nbsp
+                        i.fa-solid.fa-circle-user
+          
+          form(action='cadastrar' method='get')
               // /.col
-          .social-auth-links.text-center.mt-2.mb-3
-            a.btn.btn-block.btn-primary(href='#')
-              i.fab.fa-facebook.mr-2
-              |  Sign in using Facebook
-            a.btn.btn-block.btn-danger(href='#')
-              i.fab.fa-google-plus.mr-2
-              |  Sign in using Google+
-          // /.social-auth-links
-          p.mb-1
-            a(href='forgot-password.html') I forgot my password
-          p.mb-0
-            a.text-center(href='register.html') Register a new membership
+              center 
+                p.col-6
+                  button.btn.btn-info.btn-block(type='submit')
+                    .input-group-append
+                      .iput-group-text                          
+                        | &nbsp Cadastrar &nbsp &nbsp &nbsp &nbsp
+                        i.fa-solid.fa-house-user
 
   // jQuery
   script(src='/javascripts/jquery.min.js')
@@ -51,3 +40,5 @@ block content
   script(src='/javascripts/bootstrap.bundle.min.js')
   // AdminLTE App
   script(src='/javascripts/adminlte.min.js')
+  //Font Awesome
+  script(src="/javascripts/all.min.js") 
