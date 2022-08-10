@@ -7,14 +7,17 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "admin-lte": "^3.2.0",
     "cookie-parser": "^1.4.6",
     "debug": "^4.3.4",
     "express": "^4.18.1",
+    "gulp-cli": "^2.3.0",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "jest": "^28.1.2",
     "nodemon": "^2.0.19",
     "supertest": "^6.2.4"
