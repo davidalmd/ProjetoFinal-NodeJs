@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('Você está na rota de Recuperar Senha');
+  res.render('logged');
 });
 
 module.exports = router;

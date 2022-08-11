@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('Você está na rota de Esqueceu a Senha');
+  res.render('forgot-password');
 });
 
 module.exports = router;

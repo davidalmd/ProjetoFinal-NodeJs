@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('Você está na rota de Cadastro');
+  res.render('register');
 });
 
 module.exports = router;

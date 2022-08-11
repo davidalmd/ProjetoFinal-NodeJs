@@ -1,3 +1,65 @@
 extends layout 
 
 block content
+  .hold-transition.login-page
+    .login-box
+
+      // /.login-logo
+      .card.card-outline.card-success
+        .card-header.text-center
+          // Cada &nbsp é para dar um espaço a mais 
+          .row.offset-2 &nbsp &nbsp &nbsp
+            i.fa-solid.fa-list-check.h1
+            p &nbsp &nbsp
+            a(href="http://localhost:3000").h1|Tarefas
+        .card-body
+          h6.login-box-msg Registre um novo usuário
+          form(action='home' method='get')
+            .input-group.mb-3
+              input.form-control(type='text' placeholder='Nome Completo')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-user
+            .input-group.mb-3
+              input.form-control(type='email' placeholder='Email')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-envelope
+            .input-group.mb-3
+              input.form-control(type='password' placeholder='Senha')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-lock
+            .input-group.mb-3
+              input.form-control(type='password' placeholder='Confirme a Senha')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-lock
+            .row
+              .col-8
+                .icheck-success
+                  input#agreeTerms(type='checkbox' name='terms' value='agree')
+                  label(for='agreeTerms')
+                    | Eu concordo com os 
+                    a(href='#') termos de uso
+              // /.col
+              .col-4
+                button.btn.btn-success.btn-block(type='submit') Cadastrar
+              // /.col
+          .social-auth-links.text-center
+            a.btn.btn-block.btn-primary(href='#')
+              i.fab.fa-facebook.mr-2
+              |           Entre com sua conta Facebook
+            a.btn.btn-block.btn-danger(href='#')
+              i.fab.fa-google-plus.mr-2
+              |           Entre com sua conta Google
+          a.text-center(href="http://localhost:3000/entrar") Eu ja tenho uma conta cadastrada
+
+  // jQuery
+  script(src='/javascripts/jquery.min.js')
+  // Bootstrap 4
+  script(src='/javascripts/bootstrap.bundle.min.js')
+  // AdminLTE App
+  script(src='/javascripts/adminlte.min.js')
+  //Font Awesome
+  script(src="/javascripts/all.min.js") 

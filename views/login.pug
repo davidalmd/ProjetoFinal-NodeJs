@@ -1,51 +1,55 @@
 extends layout
 
 block content
-  .hold-transition.login-page
+  hold-transition.login-page
     .login-box
 
       // /.login-logo
-      .card.card-outline.card-primary
+      .card.card-outline.card-success
         .card-header.text-center
-          a(href="http://localhost:3000").h1|AdminLTE
+          // Cada &nbsp é para dar um espaço a mais 
+          .row.offset-2 &nbsp &nbsp &nbsp
+            i.fa-solid.fa-list-check.h1
+            p &nbsp &nbsp
+            a(href="http://localhost:3000").h1|Tarefas
         .card-body
-          p.login-box-msg Sign in to start your session
-          form(action='' method='get')
+          p.login-box-msg Preencha seus dados para iniciar a sessão
+          form(action='home' method='get')
             .input-group.mb-3
               input.form-control(type='email' placeholder='Email')
               .input-group-append
                 .input-group-text
                   span.fas.fa-envelope
             .input-group.mb-3
-              input.form-control(type='password' placeholder='Password')
+              input.form-control(type='password' placeholder='Senha')
               .input-group-append
                 .input-group-text
                   span.fas.fa-lock
             .row
               .col-8
-                .icheck-primary
+                .icheck-success
                   input#remember(type='checkbox')
                   label(for='remember')
-                    | Remember Me
+                    | Manter conectado
 
               // /.col
               .col-4
-                button.btn.btn-primary.btn-block(type='submit') Sign In
+                button.btn.btn-success.btn-block(type='submit') Login
 
               // /.col
           .social-auth-links.text-center.mt-2.mb-3
             a.btn.btn-block.btn-primary(href='#')
               i.fab.fa-facebook.mr-2
-              |  Sign in using Facebook
+              |  Entre com sua conta Facebook
             a.btn.btn-block.btn-danger(href='#')
               i.fab.fa-google-plus.mr-2
-              |  Sign in using Google+
+              |  Entre com sua conta Google
 
           // /.social-auth-links
-          p.mb-1
-            a(href='') I forgot my password
           p.mb-0
-            a.text-center(href='') Register a new membership
+            a(href="http://localhost:3000/esqueceu-senha")  Esqueci minha senha
+          p.mb-0
+            a.text-center(href="http://localhost:3000/cadastrar") Cadastrar uma nova conta
 
   // jQuery
   script(src='/javascripts/jquery.min.js')
